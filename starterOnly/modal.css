@@ -30,26 +30,36 @@ img {
   padding-right: 1rem;
 }
 
+/* Abandon du Float au profit de la méthode Flex */
+#myTopnav
+{
+  display: flex;
+  justify-content: space-between;
+}
+
 .topnav {
   overflow: hidden;
   margin: 3.5%;
 }
-.header-logo {
+
+/* .header-logo {
     float: left;
 }
 .main-navbar {
     float: right;
-}
+} */
+
 .topnav a {
   float: left;
   display: block;
   color: #000000;
   text-align: center;
-  padding: 12px 12px;
-  margin: 5px;
+  padding: 12px 12px 12px; 
+  margin: 5px; 
   text-decoration: none;
   font-size: 20px;
   font-family: Roboto, sans-serif;
+  align-self: center;
 }
 
 .topnav a:hover {
@@ -479,6 +489,17 @@ footer {
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
+
+  #myTopnav
+  {
+    background-color: violet;
+    align-items: center;
+  }
+  
+  .header-logo img
+  {
+    width: 75%;
+  }
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -499,7 +520,7 @@ footer {
     white-space: normal;
   }
   .hero-text {
-    width: unset;
+    width: 75%;
     font-size: 1.5rem;
   }
   .hero-img img {
